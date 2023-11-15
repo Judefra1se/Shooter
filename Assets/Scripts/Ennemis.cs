@@ -4,37 +4,37 @@ using UnityEngine;
 
 public class Ennemis : MonoBehaviour
 {
-    public int pv;
-    public GameObject bonus;
-    public GameObject EnnemisBullet;
-    public float timer;
-    // Start is called before the first frame update
+    public int Pv;
+    public GameObject Bonus;
+    public GameObject Balle_Ennemis;
+    public float Timer;
+
     void Start()
     {
-        timer = Random.Range(1f, 10f);
+        Timer = Random.Range(1f, 10f);
     }
 
     void Update()
     {
-        if(EnnemisBullet == true)
+        if(Balle_Ennemis == true)
         {
-            timer -= Time.deltaTime;
+            Timer -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (Timer <= 0)
             {
-                Instantiate(EnnemisBullet, transform.position, Quaternion.Euler(0, 1, 2));
-                timer = Random.Range(1f,10f);
+                Instantiate(Balle_Ennemis, transform.position, Quaternion.Euler(0, 1, 2));
+                Timer = Random.Range(1f,10f);
             }
         }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (pv <= 0)
+        if (Pv <= 0)
         {
-            Instantiate(bonus, transform.position, Quaternion.Euler(0, 1, 2));
+            Instantiate(Bonus, transform.position, Quaternion.Euler(0, 1, 2));
             Destroy(gameObject);
         }
     }
-    // Update is called once per frame
+
 }

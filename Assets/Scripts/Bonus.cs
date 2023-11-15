@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bonus : MonoBehaviour
 {
-    public int PointsGiven;
+    public int Nombre_Points;
     public int Score = 0;
 
     // Start is called before the first frame update

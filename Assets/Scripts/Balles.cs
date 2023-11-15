@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Balles : MonoBehaviour
 {
     public Rigidbody2D monRigidBody;
-    public float speed;
+    public float Vitesse;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        monRigidBody.velocity = Vector3.up*speed;
+        monRigidBody.velocity = Vector3.up*Vitesse;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Ennemis ennemiTouche = collision.gameObject.GetComponent<Ennemis>();
-        if(ennemiTouche == true)
+        Ennemis Ennemis_Touche = collision.gameObject.GetComponent<Ennemis>();
+        if(Ennemis_Touche == true)
         {
 
-            ennemiTouche.pv -= 1;
+            Ennemis_Touche.Pv -= 1;
 
 
 

@@ -8,6 +8,7 @@ public class Joueur : MonoBehaviour
     public Transform Parent;
     public Transform LimitL;
     public Transform LimitR;
+    public int Pv_Joueur = 15;
 
     public float Vitesse = 0.2f;
 
@@ -41,5 +42,17 @@ public class Joueur : MonoBehaviour
         {
             transform.position = new Vector3(LimitL.position.x, transform.position.y, transform.position.z);
         }
+
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Pv_Joueur -= 1;
+        if (Pv_Joueur <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

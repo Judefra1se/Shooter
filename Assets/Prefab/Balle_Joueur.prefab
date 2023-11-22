@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3588231135627767681}
   - component: {fileID: 4819524458355231120}
   - component: {fileID: 5144115588052714144}
-  - component: {fileID: 4094206131673932376}
   m_Layer: 0
   m_Name: Balle_Joueur
   m_TagString: Untagged
@@ -145,7 +144,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -278,17 +277,3 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &4094206131673932376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6470470209835675063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9e90b22d5293a4894afc94eb6acbc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monRigidBody: {fileID: 0}
-  Vitesse: 0

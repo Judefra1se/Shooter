@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9f58ab9a1aa294b88a41eedcb5a698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointsGiven: 3
+  Nombre_Points: 3
+  gameManager: {fileID: 0}
 --- !u!50 &8770618046966567859
 Rigidbody2D:
   serializedVersion: 4

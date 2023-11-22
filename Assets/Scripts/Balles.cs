@@ -15,18 +15,14 @@ public class Balles : MonoBehaviour
         monRigidBody.velocity = Vector3.up*Vitesse;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Ennemis Ennemis_Touche = collision.gameObject.GetComponent<Ennemis>();
-        if(Ennemis_Touche == true)
+        if(Ennemis_Touche != null)
         {
-
-            Ennemis_Touche.Pv -= 1;
-
-
-
+            Ennemis_Touche.ReduceHP(1);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
 }

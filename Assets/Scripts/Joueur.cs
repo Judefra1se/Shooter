@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Joueur : MonoBehaviour
 {
     public GameObject Balle;
@@ -9,6 +9,7 @@ public class Joueur : MonoBehaviour
     public Transform LimitL;
     public Transform LimitR;
     public int Pv_Joueur = 15;
+    public int Score = 0;
 
     public float Vitesse = 0.2f;
 
@@ -21,6 +22,7 @@ public class Joueur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += Vector3.left*Vitesse;
@@ -31,7 +33,7 @@ public class Joueur : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(Balle, Parent.position, Parent.rotation);
+            Instantiate(Balle, new Vector2(Parent.position.x, Parent.position.y + 0.7f), Parent.rotation);
         }
 
         if(transform.position.x < LimitL.position.x)
@@ -51,6 +53,7 @@ public class Joueur : MonoBehaviour
         if (Pv_Joueur <= 0)
         {
             Destroy(gameObject);
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

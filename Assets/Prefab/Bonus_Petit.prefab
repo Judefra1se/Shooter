@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9f58ab9a1aa294b88a41eedcb5a698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointsGiven: 1
+  Nombre_Points: 1
+  gameManager: {fileID: 0}
 --- !u!58 &3099379608287675856
 CircleCollider2D:
   m_ObjectHideFlags: 0

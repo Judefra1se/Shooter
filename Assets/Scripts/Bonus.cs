@@ -5,23 +5,19 @@ using UnityEngine;
 public class Bonus : MonoBehaviour
 {
     public int Nombre_Points;
-    public int Score = 0;
-
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();    
     }
 
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        gameManager.score++;
         Destroy(gameObject);
-        Score += 1;
     }
 
-    void Update()
-    {
-        print(Score);
-    }
+    
 }

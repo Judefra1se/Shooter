@@ -27,7 +27,7 @@ public class Ennemis : MonoBehaviour
             if (Timer <= 0)
             {
                 Instantiate(Balle_Ennemis, transform.position, Quaternion.Euler(0, 1, 2));
-                Timer = Random.Range(1f,100f);
+                Timer = Random.Range(1f,40f);
             }
         }
 

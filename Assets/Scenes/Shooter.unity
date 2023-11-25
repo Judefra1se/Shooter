@@ -1519,7 +1519,7 @@ MonoBehaviour:
   Parent: {fileID: 983346836}
   LimitL: {fileID: 1394487260}
   LimitR: {fileID: 2123920399}
-  Pv_Joueur: 50
+  Pv_Joueur: 30
   Score: 0
   Vitesse: 0.01
 --- !u!60 &983346838
